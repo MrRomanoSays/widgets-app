@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import 'tachyons/css/tachyons.css'
 import AddItem from './pages/form'
-
+import ItemList from './pages/index'
 
 class App extends Component {
   render() {
@@ -15,7 +15,8 @@ class App extends Component {
               <Link className="no-underline white dim ph3 tc" to="/form">Add Item</Link>
             </header>
 
-            <Route exact path="/" component={AddItem}/>
+            <Route exact path="/" component={ItemList}/>
+            <Route path="/form" component={AddItem}/>
           </div>
       </Router>
 

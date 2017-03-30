@@ -11,12 +11,8 @@ const item = (state=initialState, action) => {
   switch (action.type) {
     case 'SET_NAME':
       return set(lensProp('name'), action.payload, state)
-
-    
     case 'SET_PRICE':
       return set(lensProp('price'), action.payload, state)
-    
-
     case 'CLEAR_ITEM':
       return {}
     default:
@@ -24,9 +20,20 @@ const item = (state=initialState, action) => {
   }
 }
 
+const items = (state=[], action) => {
+  switch (action.type) {
+    case 'LOAD_ITEMS':
+      return action.payload
+    default:
+      return state
+  }
+}
+
 const store = createStore(combineReducers({
-  item
-}))
+    item: item,
+    items: items
+  })
+)
 
 
 export default store

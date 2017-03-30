@@ -3,7 +3,6 @@ import InputField from '../components/input'
 import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch'
 
-
 const testItem = {
   name: "Screwdriver",
   price: "1"
@@ -18,7 +17,6 @@ const postItem = (item) => {
     body: JSON.stringify(item)
   })
 }
-
 
 const AddItem = (props) => {
   return (
@@ -36,7 +34,6 @@ const AddItem = (props) => {
       <button className="ph2">Add/Edit</button>
       <a className="ph2" href="#">Cancel</a>
     </form>
-
   )
 }
 
@@ -61,7 +58,6 @@ const mapActionsToProps = (dispatch) => ({
       })
     })
   }
-
 })
 
 const connector = connect(mapStateToProps, mapActionsToProps)
