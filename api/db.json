@@ -1,1 +1,114 @@
-{ "widgets": [] }
+{
+  "widgets": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "name": "Hammer",
+      "price": "1",
+      "id": 7
+    },
+    {
+      "name": "Hammer",
+      "price": "1",
+      "id": 8
+    },
+    {
+      "name": "Hammer",
+      "price": "1",
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 14
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 15
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 16
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 17
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 18
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 19
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 20
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 21
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 22
+    },
+    {
+      "name": "Screwdriver",
+      "price": "1",
+      "id": 23
+    },
+    {
+      "name": "Hammer",
+      "price": "5",
+      "id": 24
+    },
+    {
+      "name": "Fence",
+      "price": "5",
+      "id": 25
+    },
+    {
+      "name": "Nails",
+      "price": ".50",
+      "id": 26
+    }
+  ]
+}

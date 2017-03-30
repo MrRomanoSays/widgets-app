@@ -3,6 +3,12 @@ import InputField from '../components/input'
 import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch'
 
+
+const testItem = {
+  name: "Screwdriver",
+  price: "1"
+}
+
 const postItem = (item) => {
   fetch(`http://localhost:5000/widgets`, {
     headers: {
@@ -13,18 +19,24 @@ const postItem = (item) => {
   })
 }
 
+
 const AddItem = (props) => {
   return (
     <form onSubmit={props.submit(props.item)} className="pa4 black-80">
       <InputField
         title='Name'
         onChange={props.changeName}
+        value={props.item.name}
       />
       <InputField
         title='Price'
         onChange={props.changePrice}
+        value={props.item.price}
       />
+      <button className="ph2">Add/Edit</button>
+      <a className="ph2" href="#">Cancel</a>
     </form>
+
   )
 }
 
