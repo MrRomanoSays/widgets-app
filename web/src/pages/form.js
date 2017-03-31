@@ -3,13 +3,14 @@ import InputField from '../components/input'
 import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch'
 
+
 const testItem = {
   name: "Screwdriver",
   price: "1"
 }
 
 const postItem = (item) => {
-  fetch(`http://localhost:5000/widgets`, {
+   return fetch(`http://localhost:5000/widgets`, {
     headers: {
       "Content-Type": "application/json"
     },
@@ -52,13 +53,9 @@ const mapActionsToProps = (dispatch) => ({
     e.preventDefault()
     postItem(item)
     .then(res => res.json())
-    .then(res => {
-      dispatch({
-        type: 'CLEAR_ITEM'
-      })
-    })
-  }
-})
+    .then(res => dispatch({type:'CLEAR_ITEM'})
+    )}
+  })
 
 const connector = connect(mapStateToProps, mapActionsToProps)
 
