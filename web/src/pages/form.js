@@ -21,7 +21,7 @@ const postItem = (item) => {
 
 const AddItem = (props) => {
   return (
-    <form onSubmit={props.submit(props.item)} className="pa4 black-80">
+    <form onSubmit={props.submit(props.item, props.history)} className="pa4 black-80">
       <InputField
         title='Name'
         onChange={props.changeName}
@@ -33,7 +33,8 @@ const AddItem = (props) => {
         value={props.item.price}
       />
       <button className="ph2">Add/Edit</button>
-      <a className="ph2" href="#">Cancel</a>
+      <a className="ph2 " href="/">Cancel</a>
+      <a className="link" href="#" onClick={e => props.history.goBack() }>Cancel v.2</a>
     </form>
   )
 }
@@ -49,11 +50,12 @@ const mapActionsToProps = (dispatch) => ({
   changePrice: (e) => dispatch({
     type: 'SET_PRICE', payload: e.target.value
   }),
-  submit: (item) => (e) => {
+  submit: (item, history) => (e) => {
     e.preventDefault()
     postItem(item)
     .then(res => res.json())
     .then(res => dispatch({type:'CLEAR_ITEM'})
+    .then(history.push('/'))
     )}
   })
 

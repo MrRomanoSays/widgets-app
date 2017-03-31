@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import 'tachyons/css/tachyons.css'
 import AddItem from './pages/form'
 import ItemList from './pages/index'
+import ShowItem from './pages/show'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
 
             <Route exact path="/" component={ItemList}/>
             <Route path="/form" component={AddItem}/>
+            <Route path="/items/:id" component={ShowItem} />
           </div>
       </Router>
 

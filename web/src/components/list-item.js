@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LiMaker = function (props) {
   return (
@@ -13,6 +14,8 @@ const LiMaker = function (props) {
       </div>
       <div className="dtc v-mid pr3">
         <form className="w-100 tr">
+          <Link className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" to={props.linkUrl}>More Info</Link>
+          
           <button className="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" type="submit">More Info</button>
         </form>
       </div>

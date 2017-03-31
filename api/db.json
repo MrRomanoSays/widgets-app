@@ -257,6 +257,21 @@
       "name": "Van",
       "price": "4000",
       "id": 54
+    },
+    {
+      "name": "Dirt",
+      "price": "Free",
+      "id": 55
+    },
+    {
+      "name": "Pants",
+      "price": "1",
+      "id": 56
+    },
+    {
+      "name": "Fence",
+      "price": "400",
+      "id": 57
     }
   ]
 }

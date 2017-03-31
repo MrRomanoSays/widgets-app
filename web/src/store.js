@@ -15,6 +15,8 @@ const item = (state=initialState, action) => {
       return set(lensProp('price'), action.payload, state)
     case 'CLEAR_ITEM':
       return initialState
+    case 'SET_CARD':
+      return action.payload
     default:
       return state
   }
